@@ -1,0 +1,98 @@
+/* Public pages for Google Play: privacy policy and account deletion. Same look as the app. */
+@font-face { font-family: Barlow; font-weight: 400; font-display: swap; src: url(/fonts/Barlow_400Regular.ttf) format('truetype'); }
+@font-face { font-family: Barlow; font-weight: 600; font-display: swap; src: url(/fonts/Barlow_600SemiBold.ttf) format('truetype'); }
+@font-face { font-family: Barlow; font-weight: 700; font-display: swap; src: url(/fonts/Barlow_700Bold.ttf) format('truetype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-display: swap; src: url(/fonts/BarlowCondensed_700Bold.ttf) format('truetype'); }
+
+:root {
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --text: #1a1d21;
+  --muted: #5b6068;
+  --border: #e2ddd2;
+  --accent: #f2a900;
+  --accent-soft: #fdf3d9;
+  --dark: #1a1d21;
+  --danger: #b42318;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 17px/1.6 Barlow, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.top { background: var(--dark); color: #fff; }
+.top .wrap { display: flex; align-items: center; gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+.top a.brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+.top .name { font: 700 24px/1 'Barlow Condensed', Barlow, sans-serif; letter-spacing: 0.2px; }
+.top .langs { margin-left: auto; display: flex; gap: 8px; }
+.top .langs a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 48px; min-height: 40px; padding: 0 12px;
+  border: 2px solid #4a4f57; border-radius: 20px;
+  color: #fff; font-weight: 600; text-decoration: none;
+}
+.top .langs a:hover, .top .langs a:focus-visible { border-color: var(--accent); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+main.wrap { padding-top: 28px; padding-bottom: 64px; }
+
+h1 { font: 700 40px/1.1 'Barlow Condensed', Barlow, sans-serif; margin: 0 0 6px; }
+h2 { font: 700 28px/1.15 'Barlow Condensed', Barlow, sans-serif; margin: 40px 0 10px; }
+h3 { font-size: 19px; font-weight: 700; margin: 26px 0 6px; }
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 6px; }
+a { color: var(--text); text-decoration-thickness: 2px; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+strong { font-weight: 700; }
+.meta { color: var(--muted); margin-bottom: 20px; }
+
+.card { background: var(--surface); border: 2px solid var(--border); border-radius: 14px; padding: 18px 18px 6px; margin: 0 0 18px; }
+.card.note { background: var(--accent-soft); border-color: var(--accent); }
+.card h3 { margin-top: 0; }
+
+.lang-section + .lang-section { margin-top: 56px; padding-top: 8px; border-top: 2px solid var(--border); }
+
+.table { width: 100%; border-collapse: collapse; margin: 0 0 18px; background: var(--surface); border-radius: 14px; overflow: hidden; }
+.table th, .table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+.table th { font-weight: 700; background: #efebe2; }
+.table tr:last-child td { border-bottom: 0; }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 22px; margin: 4px 0 16px;
+  background: var(--accent); color: var(--dark);
+  border-radius: 12px; font-weight: 700; font-size: 18px; text-decoration: none;
+}
+.button:hover, .button:focus-visible { background: #ffbb1a; }
+
+.links { display: grid; gap: 12px; margin: 24px 0; }
+.links a {
+  display: block; padding: 18px; background: var(--surface);
+  border: 2px solid var(--border); border-radius: 14px; text-decoration: none;
+}
+.links a:hover, .links a:focus-visible { border-color: var(--dark); }
+.links strong { display: block; font-size: 20px; }
+.links span { color: var(--muted); }
+
+footer { color: var(--muted); font-size: 15px; border-top: 2px solid var(--border); margin-top: 48px; padding-top: 16px; }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 25px; }
+  /* tables become stacked cards on a phone */
+  .table thead { display: none; }
+  .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+  .table tr { border-bottom: 1px solid var(--border); padding: 6px 0; }
+  .table td { border: 0; padding: 4px 14px; }
+  .table td:first-child { font-weight: 700; padding-top: 10px; }
+  .table td[data-label] { color: var(--muted); }
+  .table td[data-label]::before { content: attr(data-label); font-weight: 600; }
+}
