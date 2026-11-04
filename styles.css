@@ -1,8 +1,8 @@
 /* Public pages for Google Play: privacy policy and account deletion. Same look as the app. */
-@font-face { font-family: Barlow; font-weight: 400; font-display: swap; src: url(/fonts/Barlow_400Regular.ttf) format('truetype'); }
-@font-face { font-family: Barlow; font-weight: 600; font-display: swap; src: url(/fonts/Barlow_600SemiBold.ttf) format('truetype'); }
-@font-face { font-family: Barlow; font-weight: 700; font-display: swap; src: url(/fonts/Barlow_700Bold.ttf) format('truetype'); }
-@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-display: swap; src: url(/fonts/BarlowCondensed_700Bold.ttf) format('truetype'); }
+@font-face { font-family: Barlow; font-weight: 400; font-display: swap; src: url(fonts/Barlow_400Regular.ttf) format('truetype'); }
+@font-face { font-family: Barlow; font-weight: 600; font-display: swap; src: url(fonts/Barlow_600SemiBold.ttf) format('truetype'); }
+@font-face { font-family: Barlow; font-weight: 700; font-display: swap; src: url(fonts/Barlow_700Bold.ttf) format('truetype'); }
+@font-face { font-family: 'Barlow Condensed'; font-weight: 700; font-display: swap; src: url(fonts/BarlowCondensed_700Bold.ttf) format('truetype'); }
 
 :root {
   --bg: #f5f3ee;
